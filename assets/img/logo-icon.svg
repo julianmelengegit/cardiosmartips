@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <!-- Gradiente para mano azul -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D5B7E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2B4560;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para mano verde -->
+    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#78A832;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A5D24D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular blanco -->
+  <circle cx="110" cy="110" r="108" fill="#FFFFFF"/>
+  
+  <!-- Símbolo de manos (solo el ícono, sin texto) -->
+  <g id="icon" transform="translate(5, 5)">
+    
+    <!-- Mano superior (azul) -->
+    <path d="M 70 35
+             C 55 28 42 32 35 42
+             L 30 53
+             C 26 64 28 77 38 88
+             L 52 102
+             C 58 108 65 113 72 118
+             L 84 128
+             C 90 133 98 137 107 137
+             L 118 136
+             C 124 135 128 130 127 124
+             L 125 112
+             C 124 102 119 94 112 88
+             L 98 76
+             C 92 71 87 69 82 70
+             L 76 71
+             C 71 72 67 70 65 66
+             L 62 58
+             C 60 53 61 48 64 44
+             L 68 39
+             C 72 36 77 35 82 37
+             L 92 42
+             L 102 48
+             Z"
+          fill="url(#blueGrad)"/>
+    
+    <!-- Dedo azul -->
+    <path d="M 105 48
+             C 110 45 115 44 120 46
+             L 130 52
+             C 134 55 136 60 135 65
+             L 133 72
+             C 132 76 128 78 124 77
+             L 115 74
+             C 110 72 107 68 107 63
+             Z"
+          fill="url(#blueGrad)"
+          opacity="0.85"/>
+    
+    <!-- Mano inferior (verde) -->
+    <path d="M 155 115
+             C 170 122 183 118 190 108
+             L 195 97
+             C 199 86 197 73 187 62
+             L 173 48
+             C 167 42 160 37 153 32
+             L 141 22
+             C 135 17 127 13 118 13
+             L 107 14
+             C 101 15 97 20 98 26
+             L 100 38
+             C 101 48 106 56 113 62
+             L 127 74
+             C 133 79 138 81 143 80
+             L 149 79
+             C 154 78 158 80 160 84
+             L 163 92
+             C 165 97 164 102 161 106
+             L 157 111
+             C 153 114 148 115 143 113
+             L 133 108
+             L 123 102
+             Z"
+          fill="url(#greenGrad)"/>
+    
+    <!-- Dedo verde -->
+    <path d="M 120 102
+             C 115 105 110 106 105 104
+             L 95 98
+             C 91 95 89 90 90 85
+             L 92 78
+             C 93 74 97 72 101 73
+             L 110 76
+             C 115 78 118 82 118 87
+             Z"
+          fill="url(#greenGrad)"
+          opacity="0.85"/>
+  </g>
+  
+  <!-- Borde circular sutil -->
+  <circle cx="110" cy="110" r="108" fill="none" stroke="#E0E0E0" stroke-width="2"/>
+</svg>
