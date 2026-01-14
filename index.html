@@ -2,10 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="CardioSmart IPS - Institución Prestadora de Servicios de Salud especializada en cardiología">
     <meta name="keywords" content="cardiología, salud, IPS, CardioSmart, servicios médicos">
     <title>CardioSmart IPS - Cuidamos tu Corazón</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0066CC">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CardioSmart">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="assets/img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="assets/img/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="assets/img/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="assets/img/icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/img/icons/icon-512x512.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/icon-16x16.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +46,8 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/text-justify.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
 
@@ -39,8 +66,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#specialists">Especialistas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specialists">Equipo Médico</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     <li class="nav-item">
                         <a class="btn btn-primary btn-appointment" href="#appointment">Agendar Cita</a>
@@ -58,24 +84,10 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="hero-content">
                         <h1 class="hero-title">Cuidamos tu Corazón con <span class="text-primary">Excelencia</span></h1>
-                        <p class="hero-subtitle">Institución líder en servicios de cardiología con tecnología de punta y equipo médico especializado</p>
+                        <p class="hero-subtitle">Atención cardiovascular oportuna, segura y humana</p>
                         <div class="hero-buttons">
                             <a href="#services" class="btn btn-primary btn-lg">Nuestros Servicios</a>
                             <a href="#contact" class="btn btn-outline-light btn-lg ms-3">Contáctanos</a>
-                        </div>
-                        <div class="hero-stats mt-5">
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="15">0</h3>
-                                <p class="stat-label">Años de Experiencia</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="5000">0</h3>
-                                <p class="stat-label">Pacientes Atendidos</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="20">0</h3>
-                                <p class="stat-label">Especialistas</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,48 +106,79 @@
     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container">
-            <div class="row align-items-center">
+            <!-- Misión y Visión -->
+            <div class="row mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <div class="about-image">
-                        <img src="assets/img/about-facility.jpg" alt="Instalaciones CardioSmart" class="img-fluid rounded shadow">
-                        <div class="experience-badge">
-                            <span class="badge-number">15+</span>
-                            <span class="badge-text">Años de Experiencia</span>
-                        </div>
+                    <div class="section-header">
+                        <span class="section-subtitle">Nuestra Misión</span>
+                        <h2 class="section-title">Cuidamos tu corazón</h2>
                     </div>
+                    <p class="about-text">
+                        En CardioSmart IPS cuidamos tu corazón con un enfoque integral, humano y de alta calidad. Ofrecemos atención cardiovascular oportuna y segura, orientada a la prevención, diagnóstico y tratamiento de las enfermedades del corazón, trabajando con eficiencia y compromiso para mejorar la calidad de vida de nuestros pacientes.
+                    </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="section-header">
-                        <span class="section-subtitle">Sobre Nosotros</span>
-                        <h2 class="section-title">Comprometidos con tu Salud Cardiovascular</h2>
+                        <span class="section-subtitle">Nuestra Visión</span>
+                        <h2 class="section-title">Líderes en salud cardiovascular</h2>
                     </div>
                     <p class="about-text">
-                        CardioSmart IPS es una institución prestadora de servicios de salud especializada en cardiología, 
-                        comprometida con el bienestar y la salud cardiovascular de nuestros pacientes.
+                        Ser una IPS líder en salud cardiovascular, reconocida por la excelencia médica, la calidez humana, la rapidez en la atención y la confianza de nuestros pacientes, contribuyendo activamente a una vida más saludable y a corazones más fuertes.
                     </p>
-                    <p class="about-text">
-                        Contamos con tecnología de última generación, infraestructura moderna y un equipo de profesionales 
-                        altamente calificados que trabajan día a día para ofrecer un servicio de excelencia.
-                    </p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Tecnología de Punta</span>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="section-header text-center mb-4">
+                        <span class="section-subtitle">Nuestros Valores</span>
+                        <h2 class="section-title">Principios que nos guían</h2>
+                    </div>
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-heart"></i>
+                                <span>Humanidad</span>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Equipo Médico Especializado</span>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Calidad</span>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Atención Personalizada</span>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Seguridad del Paciente</span>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Instalaciones Modernas</span>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-clock"></i>
+                                <span>Oportunidad</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-bolt"></i>
+                                <span>Eficiencia</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Ética</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="value-badge">
+                                <i class="fas fa-handshake"></i>
+                                <span>Compromiso</span>
+                            </div>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-primary mt-4">Conoce Más</a>
                 </div>
             </div>
         </div>
@@ -146,74 +189,103 @@
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
                 <span class="section-subtitle">Nuestros Servicios</span>
-                <h2 class="section-title">Servicios Especializados en Cardiología</h2>
-                <p class="section-description">Ofrecemos una amplia gama de servicios médicos especializados para el cuidado de tu corazón</p>
+                <h2 class="section-title">Servicios CardioSmart</h2>
+                <p class="section-description">Atención integral en salud cardiovascular</p>
             </div>
             <div class="row g-4">
-                <!-- Service Card 1 -->
+                <!-- Service Card 1: Consulta de Cardiología -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-heartbeat"></i>
                         </div>
-                        <h3 class="service-title">Consulta Cardiológica</h3>
-                        <p class="service-description">Evaluación completa de tu salud cardiovascular con médicos especialistas certificados.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="service-title">Consulta de Cardiología</h3>
+                        <p class="service-description">
+                            Evaluación integral de la salud de tu corazón. Revisamos síntomas, antecedentes médicos y hábitos de vida para prevenir, diagnosticar y tratar enfermedades cardiovasculares de manera oportuna y personalizada.
+                        </p>
+                        <p class="service-description">
+                            <strong>Dirigida a:</strong> Personas con dolor en el pecho, palpitaciones, falta de aire, mareos, antecedentes de hipertensión, colesterol alto, diabetes o quienes desean una evaluación preventiva.
+                        </p>
                     </div>
                 </div>
-                <!-- Service Card 2 -->
+
+                <!-- Service Card 2: Electrocardiograma -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <h3 class="service-title">Ecocardiograma</h3>
-                        <p class="service-description">Estudios de imagen avanzados para evaluar la estructura y función de tu corazón.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <!-- Service Card 3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-heart"></i>
                         </div>
                         <h3 class="service-title">Electrocardiograma</h3>
-                        <p class="service-description">Registro de la actividad eléctrica del corazón para detectar anomalías.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                        <p class="service-description">
+                            Estudio rápido, indoloro y no invasivo que registra la actividad eléctrica del corazón. Permite detectar arritmias, alteraciones del ritmo, problemas de conducción, signos de infarto previo o sobrecarga del corazón.
+                        </p>
+                        <p class="service-description">
+                            <strong>Duración:</strong> 5-10 minutos. No requiere preparación previa. Los resultados son interpretados por un cardiólogo.
+                        </p>
                     </div>
                 </div>
-                <!-- Service Card 4 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-running"></i>
-                        </div>
-                        <h3 class="service-title">Prueba de Esfuerzo</h3>
-                        <p class="service-description">Evaluación del rendimiento cardiovascular durante el ejercicio físico.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <!-- Service Card 5 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                <!-- Service Card 3: Holter 24 Horas -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <h3 class="service-title">Holter 24 Horas</h3>
-                        <p class="service-description">Monitoreo continuo del ritmo cardíaco durante 24 horas o más.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="service-title">Monitoreo Electrocardiográfico Continuo (Holter)</h3>
+                        <p class="service-description">
+                            Registro continuo del ritmo del corazón durante 24 horas mientras realizas tus actividades diarias. Especialmente útil para detectar arritmias que no aparecen en un electrocardiograma convencional y evaluar síntomas como palpitaciones, mareos o desmayos.
+                        </p>
+                        <p class="service-description">
+                            <strong>Equipo portátil:</strong> Liviano, no interfiere con actividades cotidianas. Evitar mojar el dispositivo.
+                        </p>
                     </div>
                 </div>
-                <!-- Service Card 6 -->
+
+                <!-- Service Card 4: MAPA -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3 class="service-title">Monitoreo Ambulatorio de Presión Arterial (MAPA)</h3>
+                        <p class="service-description">
+                            Medición de la presión arterial durante 24 horas mientras realizas tus actividades habituales. Mejor herramienta para diagnosticar hipertensión, evaluar la efectividad del tratamiento y detectar elevaciones nocturnas de la presión.
+                        </p>
+                        <p class="service-description">
+                            <strong>Procedimiento:</strong> Brazalete conectado a dispositivo portátil con mediciones automáticas día y noche.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Ecocardiograma -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="service-title">Ecocardiograma Transtorácico</h3>
+                        <p class="service-description">
+                            Estudio de ultrasonido del corazón que permite observar en tiempo real su estructura y funcionamiento. Evaluamos el tamaño del corazón, la fuerza de bombeo, el funcionamiento de las válvulas y la presencia de alteraciones como cardiopatías, soplos o insuficiencia cardíaca.
+                        </p>
+                        <p class="service-description">
+                            <strong>Características:</strong> Seguro, indoloro, no invasivo, sin radiación. Duración: 20-30 minutos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Prevención y Control -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-user-md"></i>
+                            <i class="fas fa-shield-heart"></i>
                         </div>
-                        <h3 class="service-title">Rehabilitación Cardíaca</h3>
-                        <p class="service-description">Programas personalizados de recuperación y prevención cardiovascular.</p>
-                        <a href="#contact" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="service-title">Prevención y Control del Riesgo Cardiovascular</h3>
+                        <p class="service-description">
+                            Diseñado para prevenir enfermedades del corazón y controlar factores de riesgo. Evaluación completa de antecedentes, presión arterial, colesterol, azúcar, peso y hábitos de vida. Plan personalizado con cambios de estilo de vida, nutrición, actividad física y tratamiento médico cuando sea necesario.
+                        </p>
+                        <p class="service-description">
+                            <strong>Objetivo:</strong> Reducir eventos cardiovasculares y mejorar calidad de vida.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -223,46 +295,131 @@
     <!-- Why Choose Us Section -->
     <section id="why-us" class="section-padding">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="section-header">
-                        <span class="section-subtitle">¿Por Qué Elegirnos?</span>
-                        <h2 class="section-title">Razones para Confiar en CardioSmart</h2>
-                    </div>
-                    <div class="why-us-list">
-                        <div class="why-us-item">
-                            <div class="why-us-number">01</div>
-                            <div class="why-us-content">
-                                <h4>Experiencia Comprobada</h4>
-                                <p>Más de 15 años brindando servicios de cardiología de calidad</p>
-                            </div>
-                        </div>
-                        <div class="why-us-item">
-                            <div class="why-us-number">02</div>
-                            <div class="why-us-content">
-                                <h4>Tecnología Avanzada</h4>
-                                <p>Equipos de última generación para diagnósticos precisos</p>
-                            </div>
-                        </div>
-                        <div class="why-us-item">
-                            <div class="why-us-number">03</div>
-                            <div class="why-us-content">
-                                <h4>Atención Integral</h4>
-                                <p>Seguimiento personalizado desde el diagnóstico hasta la recuperación</p>
-                            </div>
-                        </div>
-                        <div class="why-us-item">
-                            <div class="why-us-number">04</div>
-                            <div class="why-us-content">
-                                <h4>Equipo Especializado</h4>
-                                <p>Profesionales certificados y en constante actualización</p>
-                            </div>
-                        </div>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">Derechos y Deberes</span>
+                <h2 class="section-title">Información para Pacientes</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="info-card">
+                        <h3 class="mb-4"><i class="fas fa-user-check text-primary me-2"></i> Derechos de los Pacientes</h3>
+                        <p class="mb-3">En CardioSmart IPS, todos los usuarios tienen derecho a:</p>
+                        <ol class="custom-list">
+                            <li>Recibir atención en salud digna, humanizada, segura y de calidad, sin discriminación.</li>
+                            <li>Acceder a los servicios de salud de manera oportuna, continua e integral.</li>
+                            <li>Ser tratados con respeto, amabilidad, confidencialidad y privacidad.</li>
+                            <li>Recibir información clara sobre su estado de salud, diagnósticos y tratamientos.</li>
+                            <li>Otorgar o rechazar su consentimiento informado.</li>
+                            <li>Confidencialidad de su historia clínica y datos personales.</li>
+                            <li>Presentar peticiones, quejas, reclamos y recibir respuesta oportuna.</li>
+                            <li>Participar en las decisiones relacionadas con su atención.</li>
+                            <li>Recibir atención segura basada en evidencia científica.</li>
+                            <li>Elegir libremente al profesional de la salud.</li>
+                        </ol>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="why-us-image">
-                        <img src="assets/img/why-choose-us.jpg" alt="Por qué elegirnos" class="img-fluid rounded shadow">
+
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3 class="mb-4"><i class="fas fa-clipboard-list text-primary me-2"></i> Deberes de los Pacientes</h3>
+                        <p class="mb-3">Los usuarios de CardioSmart IPS tienen el deber de:</p>
+                        <ol class="custom-list">
+                            <li>Brindar información veraz, clara y completa sobre su estado de salud.</li>
+                            <li>Cumplir las recomendaciones médicas y planes de tratamiento.</li>
+                            <li>Tratar con respeto al personal de salud, pacientes y acompañantes.</li>
+                            <li>Cuidar las instalaciones, equipos y recursos de la IPS.</li>
+                            <li>Cumplir las normas institucionales y administrativas.</li>
+                            <li>Informar oportunamente la imposibilidad de asistir a citas.</li>
+                            <li>Usar adecuadamente los servicios de salud.</li>
+                            <li>Contribuir al autocuidado y prevención de la enfermedad.</li>
+                        </ol>
+                        <p class="mt-3 small text-muted">
+                            <strong>Soporte normativo:</strong> Ley 1751 de 2015, Ley 100 de 1993, Resolución 229 de 2020, Decreto 1011 de 2006
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Código de Ética -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="info-card">
+                        <h3 class="mb-4"><i class="fas fa-balance-scale text-primary me-2"></i> Código de Ética y Conducta Institucional</h3>
+                        
+                        <h5 class="mt-4 mb-3">Principios Éticos</h5>
+                        <p>El actuar de CardioSmart IPS y su talento humano se rige por los siguientes principios:</p>
+                        <ul class="custom-list-inline mb-4">
+                            <li>Respeto por la dignidad humana</li>
+                            <li>Beneficencia y no maleficencia</li>
+                            <li>Autonomía del paciente</li>
+                            <li>Justicia y equidad</li>
+                            <li>Transparencia y responsabilidad</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Lineamientos de Conducta Institucional</h5>
+                        <p>Todos los colaboradores de CardioSmart IPS deberán:</p>
+                        <ol class="custom-list">
+                            <li>Ejercer su labor con ética profesional, idoneidad técnica y compromiso con la seguridad del paciente.</li>
+                            <li>Mantener una conducta respetuosa, honesta y responsable.</li>
+                            <li>Garantizar la confidencialidad de la información clínica y administrativa.</li>
+                            <li>Evitar conflictos de interés y actuar siempre en beneficio del paciente.</li>
+                            <li>Cumplir la normatividad legal vigente y las políticas institucionales.</li>
+                            <li>Promover una cultura de humanización, calidad y mejora continua.</li>
+                            <li>Reportar eventos adversos, incidentes y riesgos de forma responsable.</li>
+                            <li>Abstenerse de cualquier forma de maltrato, acoso, discriminación o corrupción.</li>
+                        </ol>
+                        <p class="mt-3 small text-muted">
+                            <strong>Soporte normativo:</strong> Ley 23 de 1981, Ley 1751 de 2015, Decreto 1011 de 2006, Resolución 3100 de 2019
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Política de Privacidad -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="info-card">
+                        <h3 class="mb-4"><i class="fas fa-user-shield text-primary me-2"></i> Política de Privacidad y Tratamiento de Datos Personales</h3>
+                        
+                        <h5 class="mt-3 mb-3">Objeto</h5>
+                        <p>CardioSmart IPS se compromete a garantizar la protección, confidencialidad y seguridad de los datos personales y datos sensibles, en especial los relacionados con la información en salud, conforme a la legislación colombiana.</p>
+
+                        <h5 class="mt-4 mb-3">Datos Recolectados</h5>
+                        <ul class="custom-list">
+                            <li>Datos de identificación</li>
+                            <li>Datos de contacto</li>
+                            <li>Información clínica y de salud</li>
+                            <li>Datos administrativos y de facturación</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Finalidad del Tratamiento</h5>
+                        <p>Los datos personales serán tratados para:</p>
+                        <ul class="custom-list">
+                            <li>Prestación de servicios de salud</li>
+                            <li>Gestión de historias clínicas</li>
+                            <li>Cumplimiento de obligaciones legales</li>
+                            <li>Facturación y trámites administrativos</li>
+                            <li>Contacto con el usuario</li>
+                            <li>Reportes exigidos por autoridades competentes</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Derechos del Titular de los Datos</h5>
+                        <p>El titular podrá:</p>
+                        <ul class="custom-list">
+                            <li>Conocer, actualizar y rectificar sus datos</li>
+                            <li>Solicitar prueba de la autorización otorgada</li>
+                            <li>Solicitar la supresión de datos cuando sea procedente</li>
+                            <li>Revocar la autorización cuando no exista deber legal o contractual</li>
+                            <li>Presentar quejas ante la Superintendencia de Industria y Comercio</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Seguridad y Confidencialidad</h5>
+                        <p>CardioSmart IPS implementa medidas técnicas, administrativas y humanas para proteger la información contra pérdida, acceso no autorizado o uso indebido.</p>
+
+                        <p class="mt-3 small text-muted">
+                            <strong>Soporte normativo:</strong> Ley 1581 de 2012, Decreto 1377 de 2013, Ley 1266 de 2008, Ley 23 de 1981
+                        </p>
                     </div>
                 </div>
             </div>
@@ -274,75 +431,44 @@
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
                 <span class="section-subtitle">Nuestro Equipo</span>
-                <h2 class="section-title">Especialistas en Cardiología</h2>
-                <p class="section-description">Profesionales altamente calificados comprometidos con tu salud</p>
+                <h2 class="section-title">Equipo Médico</h2>
+                <p class="section-description">Profesionales comprometidos con tu salud cardiovascular</p>
             </div>
-            <div class="row g-4">
-                <!-- Specialist Card 1 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4 justify-content-center">
+                <!-- Specialist Card 1: Dr. Jonnathan Patiño Pinilla -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="specialist-card">
                         <div class="specialist-image">
-                            <img src="assets/img/specialist-1.jpg" alt="Dr. Nombre" class="img-fluid">
-                            <div class="specialist-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
-                            </div>
+                            <img src="assets/img/Jonnathan Patiño Pinilla.jpeg" alt="Dr. Jonnathan Patiño Pinilla" class="img-fluid">
                         </div>
                         <div class="specialist-info">
-                            <h4 class="specialist-name">Dr. [Nombre Especialista]</h4>
-                            <p class="specialist-title">Cardiólogo - Electrofisiólogo</p>
-                            <p class="specialist-description">Especialista en arritmias cardíacas</p>
+                            <h4 class="specialist-name">Dr. Jonnathan Patiño Pinilla</h4>
+                            <p class="specialist-title">Médico Internista - Cardiólogo</p>
+                            <div class="specialist-credentials">
+                                <p><i class="fas fa-graduation-cap text-primary me-2"></i>Médico internista - Universidad de la Sabana</p>
+                                <p><i class="fas fa-graduation-cap text-primary me-2"></i>Cardiólogo - Fundación Cardioinfantil, Universidad del Rosario</p>
+                                <p><i class="fas fa-certificate text-primary me-2"></i>Estudios avanzados en insuficiencia cardiaca, Clínica CardioVID, UPB</p>
+                                <p><i class="fas fa-chalkboard-teacher text-primary me-2"></i>Profesor Adscrito</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Specialist Card 2 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                <!-- Specialist Card 2: Dr. Orlando Castaño Cifuentes -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="specialist-card">
                         <div class="specialist-image">
-                            <img src="assets/img/specialist-2.jpg" alt="Dr. Nombre" class="img-fluid">
-                            <div class="specialist-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
-                            </div>
+                            <img src="assets/img/dr-castano.jpg" alt="Dr. Orlando Castaño Cifuentes" class="img-fluid">
+                            <!-- Nota: Colocar foto del Dr. Orlando Castaño Cifuentes -->
                         </div>
                         <div class="specialist-info">
-                            <h4 class="specialist-name">Dr. [Nombre Especialista]</h4>
-                            <p class="specialist-title">Cardiólogo Intervencionista</p>
-                            <p class="specialist-description">Especialista en hemodinamia</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Specialist Card 3 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="specialist-card">
-                        <div class="specialist-image">
-                            <img src="assets/img/specialist-3.jpg" alt="Dr. Nombre" class="img-fluid">
-                            <div class="specialist-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            <h4 class="specialist-name">Dr. Orlando Castaño Cifuentes</h4>
+                            <p class="specialist-title">Medicina Interna - Cardiología Clínica</p>
+                            <div class="specialist-credentials">
+                                <p class="specialist-bio">
+                                    Médico internista - cardiólogo con vocación de servicio y compromiso con la excelencia clínica, académica e investigativa. Mi propósito es consolidar una trayectoria profesional que contribuya al diagnóstico, tratamiento y prevención integral de las enfermedades cardiovasculares, promoviendo la salud y el bienestar de mis pacientes, con el más alto nivel académico y la mayor calidez humana.
+                                </p>
                             </div>
-                        </div>
-                        <div class="specialist-info">
-                            <h4 class="specialist-name">Dra. [Nombre Especialista]</h4>
-                            <p class="specialist-title">Cardióloga Clínica</p>
-                            <p class="specialist-description">Especialista en prevención</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Specialist Card 4 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="specialist-card">
-                        <div class="specialist-image">
-                            <img src="assets/img/specialist-4.jpg" alt="Dr. Nombre" class="img-fluid">
-                            <div class="specialist-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="specialist-info">
-                            <h4 class="specialist-name">Dr. [Nombre Especialista]</h4>
-                            <p class="specialist-title">Ecocardiografista</p>
-                            <p class="specialist-description">Especialista en imagen cardíaca</p>
                         </div>
                     </div>
                 </div>
@@ -351,98 +477,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle">Testimonios</span>
-                <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
-                <p class="section-description">Experiencias reales de quienes han confiado en nosotros</p>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Testimonial 1 -->
-                            <div class="carousel-item active">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p class="testimonial-text">
-                                        "Excelente atención y profesionalismo. El equipo de CardioSmart me brindó 
-                                        tranquilidad y confianza durante todo mi tratamiento. Los recomiendo ampliamente."
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <img src="assets/img/patient-1.jpg" alt="Paciente">
-                                        <div>
-                                            <h5>[Nombre del Paciente]</h5>
-                                            <p>Paciente CardioSmart</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 2 -->
-                            <div class="carousel-item">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p class="testimonial-text">
-                                        "La tecnología y los equipos son de primera. Me sentí muy bien atendido desde 
-                                        la primera consulta. El seguimiento post-tratamiento ha sido excepcional."
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <img src="assets/img/patient-2.jpg" alt="Paciente">
-                                        <div>
-                                            <h5>[Nombre del Paciente]</h5>
-                                            <p>Paciente CardioSmart</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 3 -->
-                            <div class="carousel-item">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p class="testimonial-text">
-                                        "Agradezco el trato humano y profesional de todo el personal. Me explicaron 
-                                        cada procedimiento detalladamente y me sentí muy seguro en todo momento."
-                                    </p>
-                                    <div class="testimonial-author">
-                                        <img src="assets/img/patient-3.jpg" alt="Paciente">
-                                        <div>
-                                            <h5>[Nombre del Paciente]</h5>
-                                            <p>Paciente CardioSmart</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- NOTA: Esta sección está pendiente de contenido real de testimonios -->
+    <!-- Se puede eliminar o actualizar con testimonios reales de pacientes -->
 
     <!-- Appointment Section -->
     <section id="appointment" class="section-padding bg-primary text-white">
@@ -450,18 +486,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="appointment-title">¿Listo para Cuidar tu Corazón?</h2>
-                    <p class="appointment-text">Agenda tu cita con nuestros especialistas y recibe la mejor atención médica</p>
+                    <p class="appointment-text">Agenda tu cita con nuestros especialistas</p>
                     <ul class="appointment-benefits">
-                        <li><i class="fas fa-check"></i> Atención inmediata</li>
-                        <li><i class="fas fa-check"></i> Diagnóstico preciso</li>
+                        <li><i class="fas fa-check"></i> Atención humanizada</li>
+                        <li><i class="fas fa-check"></i> Diagnóstico oportuno</li>
                         <li><i class="fas fa-check"></i> Seguimiento personalizado</li>
-                        <li><i class="fas fa-check"></i> Tecnología de punta</li>
+                        <li><i class="fas fa-check"></i> Atención de calidad</li>
                     </ul>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="appointment-form-container">
                         <form id="appointmentForm" class="appointment-form">
                             <h3 class="form-title">Agendar Cita</h3>
+                            <!-- NOTA: Configurar el formulario con el sistema de citas real -->
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Nombre completo" required>
                             </div>
@@ -474,12 +511,12 @@
                             <div class="mb-3">
                                 <select class="form-select" required>
                                     <option value="">Selecciona un servicio</option>
-                                    <option value="consulta">Consulta Cardiológica</option>
-                                    <option value="ecocardiograma">Ecocardiograma</option>
+                                    <option value="consulta">Consulta de Cardiología</option>
                                     <option value="electrocardiograma">Electrocardiograma</option>
-                                    <option value="prueba-esfuerzo">Prueba de Esfuerzo</option>
-                                    <option value="holter">Holter 24 Horas</option>
-                                    <option value="rehabilitacion">Rehabilitación Cardíaca</option>
+                                    <option value="holter">Monitoreo Holter 24 Horas</option>
+                                    <option value="mapa">Monitoreo MAPA</option>
+                                    <option value="ecocardiograma">Ecocardiograma Transtorácico</option>
+                                    <option value="prevencion">Prevención y Control del Riesgo Cardiovascular</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -502,17 +539,18 @@
             <div class="section-header text-center" data-aos="fade-up">
                 <span class="section-subtitle">Contáctanos</span>
                 <h2 class="section-title">Estamos Aquí para Ayudarte</h2>
-                <p class="section-description">Comunícate con nosotros a través de cualquiera de nuestros canales</p>
+                <p class="section-description">Comunícate con nosotros</p>
             </div>
             <div class="row g-4">
                 <!-- Contact Info -->
+                <!-- NOTA: Actualizar con información de contacto real -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="contact-info-card">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4>Dirección</h4>
-                        <p>[Dirección de la IPS]<br>[Ciudad, País]</p>
+                        <p>[Pendiente: Dirección de la IPS]<br>[Pendiente: Ciudad, Colombia]</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -521,7 +559,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <h4>Teléfono</h4>
-                        <p>+57 [Teléfono]<br>Línea de atención 24/7</p>
+                        <p>[Pendiente: Número de teléfono]<br>[Pendiente: Horario de atención]</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
@@ -530,7 +568,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h4>Email</h4>
-                        <p>info@cardiosmart.com<br>contacto@cardiosmart.com</p>
+                        <p>[Pendiente: email@cardiosmart.com]</p>
                     </div>
                 </div>
             </div>
@@ -538,6 +576,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="contact-form-container">
                         <h3>Envíanos un Mensaje</h3>
+                        <!-- NOTA: Configurar con sistema de correo real -->
                         <form id="contactForm">
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Nombre" required>
@@ -557,13 +596,10 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9!2d-74.0!3d4.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnMDAuMCJOIDc0wrAwMCcwMC4wIlc!5e0!3m2!1ses!2sco!4v1234567890!5m2!1ses!2sco" 
-                                width="100%" 
-                                height="450" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
-                        </iframe>
+                        <!-- NOTA: Actualizar con la ubicación real en Google Maps -->
+                        <div class="map-placeholder">
+                            <p>[Pendiente: Configurar ubicación en Google Maps]</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -578,13 +614,13 @@
                     <div class="footer-widget">
                         <h4 class="footer-title">CardioSmart IPS</h4>
                         <p class="footer-text">
-                            Institución líder en servicios de cardiología, comprometidos con la excelencia 
-                            en el cuidado de tu salud cardiovascular.
+                            Cuidamos tu corazón con un enfoque integral, humano y de alta calidad. 
+                            Atención cardiovascular oportuna, segura y personalizada.
                         </p>
                         <div class="footer-social">
+                            <!-- NOTA: Actualizar con redes sociales reales -->
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -596,7 +632,7 @@
                             <li><a href="#home">Inicio</a></li>
                             <li><a href="#about">Nosotros</a></li>
                             <li><a href="#services">Servicios</a></li>
-                            <li><a href="#specialists">Especialistas</a></li>
+                            <li><a href="#specialists">Equipo Médico</a></li>
                             <li><a href="#contact">Contacto</a></li>
                         </ul>
                     </div>
@@ -605,40 +641,25 @@
                     <div class="footer-widget">
                         <h4 class="footer-title">Servicios</h4>
                         <ul class="footer-links">
-                            <li><a href="#services">Consulta Cardiológica</a></li>
-                            <li><a href="#services">Ecocardiograma</a></li>
+                            <li><a href="#services">Consulta de Cardiología</a></li>
                             <li><a href="#services">Electrocardiograma</a></li>
-                            <li><a href="#services">Prueba de Esfuerzo</a></li>
-                            <li><a href="#services">Holter 24 Horas</a></li>
+                            <li><a href="#services">Monitoreo Holter</a></li>
+                            <li><a href="#services">Monitoreo MAPA</a></li>
+                            <li><a href="#services">Ecocardiograma</a></li>
+                            <li><a href="#services">Prevención Cardiovascular</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h4 class="footer-title">Horario</h4>
-                        <ul class="footer-schedule">
-                            <li>
-                                <span>Lunes - Viernes:</span>
-                                <span>7:00 AM - 7:00 PM</span>
-                            </li>
-                            <li>
-                                <span>Sábados:</span>
-                                <span>8:00 AM - 2:00 PM</span>
-                            </li>
-                            <li>
-                                <span>Domingos:</span>
-                                <span>Cerrado</span>
-                            </li>
-                            <li>
-                                <span>Emergencias:</span>
-                                <span>24/7</span>
-                            </li>
-                        </ul>
+                        <!-- NOTA: Actualizar con horario real -->
+                        <p>[Pendiente: Horario de atención]</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 CardioSmart IPS. Todos los derechos reservados.</p>
+                <p>&copy; 2026 CardioSmart IPS. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -659,6 +680,21 @@
     
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado exitosamente:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Error al registrar Service Worker:', error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,69 @@
+/* ============================================
+   TEXT JUSTIFICATION - CardioSmart IPS
+   ============================================ */
+
+/* About Section - Misión y Visión */
+.about-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Service Cards */
+.service-card .service-description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Info Cards - Derechos, Deberes, Código de Ética */
+.info-card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.info-card ol li,
+.info-card ul li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Footer */
+.footer-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Appointment Section */
+.appointment-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Section descriptions */
+.section-description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Specialist bio */
+.specialist-bio {
+    text-align: justify !important;
+    text-justify: inter-word;
+}
+
+/* Contact info */
+.contact-info-card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Custom list items */
+.custom-list li {
+    text-align: justify;
+    text-justify: inter-word;
+}

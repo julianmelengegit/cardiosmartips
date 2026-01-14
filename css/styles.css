@@ -3,6 +3,77 @@
    ============================================ */
 
 /* ============================================
+   FONTS - All Round Gothic (Tipografía Oficial CardioSmart)
+   ============================================ */
+
+/* All Round Gothic XLig */
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-XLig.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-XLig.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-XLigOblique.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-XLigOblique.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* All Round Gothic Book */
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-Book.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-BookOblique.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-BookOblique.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* All Round Gothic Medium */
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-Medium.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-MediumOblique.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* All Round Gothic Demi */
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('../assets/fonts/AllRoundGothic-Demi.woff2') format('woff2'),
+         url('../assets/fonts/AllRoundGothic-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============================================
    1. ROOT VARIABLES & GENERAL STYLES
    ============================================ */
 
@@ -28,10 +99,9 @@
     --gradient-primary: linear-gradient(135deg, #0066CC 0%, #00A8E8 100%);
     --gradient-overlay: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(0, 168, 232, 0.9) 100%);
     
-    /* Typography - Basada en All Round Gothic (Manual de Marca CardioSmart) */
-    /* Oficial: All Round Gothic - Web: Montserrat (alternativa cercana) */
-    --font-primary: 'Montserrat', 'All Round Gothic', sans-serif;
-    --font-secondary: 'Lato', 'All Round Gothic', sans-serif;
+    /* Typography - All Round Gothic (Manual de Marca CardioSmart) */
+    --font-primary: 'All Round Gothic', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-secondary: 'All Round Gothic', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
     /* Spacing */
     --section-padding: 100px 0;
@@ -67,13 +137,51 @@ body {
     color: var(--gray-dark);
     background-color: var(--white);
     overflow-x: hidden;
+    font-weight: 400; /* All Round Gothic Book */
+    letter-spacing: 0.3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
-    font-weight: 600;
+    font-weight: 600; /* All Round Gothic Demi */
     line-height: 1.3;
     color: var(--dark);
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-weight: 600; /* All Round Gothic Demi */
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-weight: 600; /* All Round Gothic Demi */
+    letter-spacing: -0.5px;
+}
+
+h3, h4 {
+    font-weight: 500; /* All Round Gothic Medium */
+}
+
+h5, h6 {
+    font-weight: 400; /* All Round Gothic Book */
+}
+
+/* Clases de utilidad para variaciones de fuente */
+.font-xlig {
+    font-weight: 200; /* All Round Gothic XLig */
+}
+
+.font-book {
+    font-weight: 400; /* All Round Gothic Book */
+}
+
+.font-medium {
+    font-weight: 500; /* All Round Gothic Medium */
+}
+
+.font-demi {
+    font-weight: 600; /* All Round Gothic Demi */
 }
 
 a {
@@ -115,7 +223,8 @@ img {
 .navbar {
     padding: 20px 0;
     transition: var(--transition);
-    background-color: transparent;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
 }
 
 .navbar.scrolled {
@@ -128,7 +237,7 @@ img {
     display: flex;
     align-items: center;
     font-weight: 700;
-    color: var(--white);
+    color: var(--dark);
     transition: var(--transition);
 }
 
@@ -137,22 +246,22 @@ img {
 }
 
 .navbar-brand .logo {
-    height: 80px;
+    height: 65px;
     margin-right: 0;
     transition: var(--transition);
 }
 
-/* Logo blanco visible al inicio */
+/* Logo blanco oculto */
 .navbar-brand .logo-white {
-    display: block;
-}
-
-/* Logo a color oculto al inicio */
-.navbar-brand .logo-color {
     display: none;
 }
 
-/* Al hacer scroll - ocultar blanco y mostrar color */
+/* Logo a color visible siempre */
+.navbar-brand .logo-color {
+    display: block;
+}
+
+/* Al hacer scroll - mantener logo color */
 .navbar.scrolled .navbar-brand .logo-white {
     display: none;
 }
@@ -166,7 +275,7 @@ img {
 }
 
 .navbar-nav .nav-link {
-    color: var(--white);
+    color: var(--gray-dark);
     font-weight: 500;
     padding: 8px 20px;
     margin: 0 5px;
@@ -179,7 +288,7 @@ img {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--primary-light);
+    color: var(--primary-color);
 }
 
 .navbar.scrolled .navbar-nav .nav-link:hover {
@@ -1245,4 +1354,226 @@ img {
 
 .fade-in-right {
     animation: fadeInRight 0.6s ease-out;
+}
+
+/* ============================================
+   CUSTOM STYLES - CardioSmart
+   ============================================ */
+
+/* Value Badges */
+.value-badge {
+    background: var(--white);
+    padding: 20px 15px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.value-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.value-badge i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.value-badge span {
+    font-weight: 600;
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Info Cards */
+.info-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.info-card h3 {
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.info-card h5 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding: 8px 0 8px 35px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.custom-list li:before {
+    content: '\f058';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.custom-list-inline {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.custom-list-inline li {
+    padding: 8px 15px;
+    background: var(--light);
+    border-radius: var(--radius-sm);
+    color: var(--gray-dark);
+    font-weight: 500;
+}
+
+/* Specialist Card Updates */
+.specialist-credentials {
+    margin-top: 15px;
+}
+
+.specialist-credentials p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.specialist-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Service Card Extended */
+.service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card .service-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.service-card .service-description strong {
+    color: var(--primary-color);
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    width: 100%;
+    height: 450px;
+    background: var(--light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 1.1rem;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .value-badge span {
+        font-size: 0.85rem;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .custom-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   TEXT ALIGNMENT - JUSTIFY
+   ============================================ */
+
+/* About Section */
+.about-text {
+    text-align: justify;
+}
+
+/* Service Cards */
+.service-description {
+    text-align: justify;
+}
+
+/* Info Cards - Derechos, Deberes, etc */
+.info-card p {
+    text-align: justify;
+}
+
+.info-card ol li,
+.info-card ul li {
+    text-align: justify;
+}
+
+/* Footer */
+.footer-text {
+    text-align: justify;
+}
+
+/* Appointment Section */
+.appointment-text {
+    text-align: justify;
+}
+
+/* Section descriptions */
+.section-description {
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+    text-align: justify;
+}
+
+/* Specialist bio and credentials */
+.specialist-bio {
+    text-align: justify !important;
+}
+
+.specialist-credentials p {
+    text-align: left;
+}
+
+/* Why us content */
+.why-us-content p {
+    text-align: justify;
+}
+
+/* General paragraph justification */
+p:not(.text-center):not(.specialist-title):not(.stat-label):not(.section-subtitle) {
+    text-align: justify;
 }

@@ -1,0 +1,533 @@
+/* ============================================
+   RESPONSIVE MOBILE OPTIMIZATIONS - CardioSmart IPS
+   ============================================ */
+
+/* Tablets y dispositivos medianos (768px - 991px) */
+@media (max-width: 991px) {
+    /* Hero Section */
+    .hero-section {
+        min-height: auto;
+        padding: 120px 0 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image {
+        margin-top: 40px;
+    }
+    
+    /* Navigation */
+    .navbar-nav {
+        padding: 20px 0;
+        background: var(--white);
+    }
+    
+    .navbar-nav .nav-link {
+        color: var(--dark) !important;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--light);
+    }
+    
+    .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+    
+    .btn-appointment {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Sections */
+    .section-padding {
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Services */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Values */
+    .value-badge {
+        padding: 15px 10px;
+    }
+    
+    .value-badge i {
+        font-size: 1.5rem;
+    }
+    
+    .value-badge span {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles grandes y tablets pequeñas (576px - 767px) */
+@media (max-width: 767px) {
+    /* Typography */
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    .hero-buttons .btn.ms-3 {
+        margin-left: 0 !important;
+    }
+    
+    /* Sections */
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+    }
+    
+    /* About Section */
+    .about-text {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Values */
+    .value-badge {
+        padding: 12px 8px;
+    }
+    
+    .value-badge i {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .value-badge span {
+        font-size: 0.75rem;
+    }
+    
+    /* Services */
+    .service-card {
+        padding: 25px 15px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+    
+    .service-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Info Cards */
+    .info-card {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .info-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    .info-card p,
+    .info-card li {
+        font-size: 0.9rem;
+    }
+    
+    .custom-list li {
+        padding: 6px 0 6px 30px;
+    }
+    
+    /* Specialists */
+    .specialist-card {
+        margin-bottom: 30px;
+    }
+    
+    .specialist-name {
+        font-size: 1.2rem;
+    }
+    
+    .specialist-title {
+        font-size: 0.95rem;
+    }
+    
+    .specialist-credentials p,
+    .specialist-bio {
+        font-size: 0.85rem;
+    }
+    
+    /* Appointment */
+    .appointment-title {
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .appointment-text {
+        font-size: 0.95rem;
+    }
+    
+    .appointment-benefits {
+        margin: 20px 0;
+    }
+    
+    .appointment-benefits li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+    
+    .appointment-form-container {
+        margin-top: 30px;
+        padding: 25px 20px;
+    }
+    
+    /* Contact */
+    .contact-info-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños (320px - 575px) */
+@media (max-width: 575px) {
+    /* Typography */
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Hero Section - Optimizado para móvil */
+    .hero-section {
+        padding: 90px 0 50px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .hero-image {
+        display: none; /* Ocultar imagen en móviles muy pequeños */
+    }
+    
+    /* Navigation */
+    .navbar-brand .logo {
+        height: 50px;
+    }
+    
+    /* Sections - Más compactas */
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
+        padding-left: 35px;
+    }
+    
+    .section-subtitle::before {
+        width: 25px;
+        height: 2px;
+        left: 0;
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 14px 25px;
+    }
+    
+    /* Values - Grid más compacto */
+    .value-badge {
+        padding: 10px 5px;
+    }
+    
+    .value-badge i {
+        font-size: 1.2rem;
+    }
+    
+    .value-badge span {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+    
+    /* Service Cards - Contenido esencial */
+    .service-card {
+        padding: 20px 15px;
+    }
+    
+    .service-title {
+        font-size: 1.1rem;
+        margin-top: 12px;
+    }
+    
+    .service-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    /* Info Cards - Reducir padding */
+    .info-card {
+        padding: 15px 12px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .info-card h5 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .info-card p,
+    .info-card li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    .custom-list li {
+        padding: 5px 0 5px 28px;
+        font-size: 0.85rem;
+    }
+    
+    .custom-list li:before {
+        font-size: 1rem;
+    }
+    
+    /* Specialists */
+    .specialist-card {
+        margin-bottom: 25px;
+    }
+    
+    .specialist-name {
+        font-size: 1.1rem;
+    }
+    
+    .specialist-credentials p,
+    .specialist-bio {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    /* Forms */
+    .form-control,
+    .form-select {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    
+    /* Contact */
+    .contact-info-card {
+        padding: 20px 15px;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .contact-info-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    /* Footer - Más compacto */
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-widget {
+        margin-bottom: 25px;
+    }
+    
+    .footer-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-text,
+    .footer-links li a {
+        font-size: 0.85rem;
+    }
+    
+    .footer-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra pequeños (< 360px) */
+@media (max-width: 360px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+    
+    .navbar-brand .logo {
+        height: 45px;
+    }
+    
+    .value-badge span {
+        font-size: 0.65rem;
+    }
+}
+
+/* Landscape orientation para móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+/* Touch devices optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar áreas de toque */
+    .btn,
+    .nav-link,
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Mejorar contraste en hover para pantallas táctiles */
+    .btn:active,
+    .nav-link:active {
+        opacity: 0.8;
+    }
+}
