@@ -26,6 +26,32 @@
     text-justify: inter-word;
 }
 
+/* Excepciones - No justificar estos elementos */
+.principle-badge p,
+.conduct-card p,
+.ethics-section h5,
+.conduct-section h5,
+.ethics-section > p,
+.conduct-section > p {
+    text-align: center !important;
+    text-justify: auto !important;
+}
+
+/* Privacy boxes - Justificación mejorada */
+.privacy-box p,
+.privacy-box li,
+.privacy-box .custom-list li {
+    text-align: left !important;
+    text-justify: auto !important;
+    hyphens: none !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+}
+
+.privacy-box h5 {
+    text-align: center !important;
+}
+
 /* Footer */
 .footer-text {
     text-align: justify;
@@ -40,8 +66,8 @@
 
 /* Section descriptions */
 .section-description {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: center !important;
+    text-justify: auto !important;
 }
 
 /* Hero subtitle */

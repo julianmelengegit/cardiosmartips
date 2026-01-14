@@ -2,6 +2,11 @@
    RESPONSIVE MOBILE OPTIMIZATIONS - CardioSmart IPS
    ============================================ */
 
+/* Mobile line breaks - Hidden by default */
+.mobile-break {
+    display: none;
+}
+
 /* Tablets y dispositivos medianos (768px - 991px) */
 @media (max-width: 991px) {
     /* Hero Section */
@@ -75,6 +80,11 @@
 
 /* Móviles grandes y tablets pequeñas (576px - 767px) */
 @media (max-width: 767px) {
+    /* Show mobile line breaks */
+    .mobile-break {
+        display: inline;
+    }
+    
     /* Typography */
     body {
         font-size: 15px;
