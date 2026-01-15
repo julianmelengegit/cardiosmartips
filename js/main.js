@@ -462,6 +462,128 @@
         $('.collapse').removeClass('show');
     });
 
+    // ============================================
+    // 22. RIPPLE EFFECT ON BUTTONS
+    // ============================================
+    
+    $('.btn').on('click', function(e) {
+        const $button = $(this);
+        const ripple = $('<span class="ripple"></span>');
+        
+        const x = e.pageX - $button.offset().left;
+        const y = e.pageY - $button.offset().top;
+        
+        ripple.css({
+            top: y + 'px',
+            left: x + 'px'
+        });
+        
+        $button.append(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+
+    // ============================================
+    // 23. LAZY LOADING IMAGES ENHANCEMENT
+    // ============================================
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // ============================================
+    // 24. CARD TILT EFFECT (3D)
+    // ============================================
+    
+    $('.service-card, .specialist-card').on('mousemove', function(e) {
+        const $card = $(this);
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * 5;
+        const rotateY = ((centerX - x) / centerX) * 5;
+        
+        $card.css({
+            transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
+        });
+    });
+
+    $('.service-card, .specialist-card').on('mouseleave', function() {
+        $(this).css({
+            transform: 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)'
+        });
+    });
+
+    // ============================================
+    // 25. SCROLL PROGRESS INDICATOR
+    // ============================================
+    
+    const scrollProgress = $('<div class="scroll-progress"></div>');
+    scrollProgress.css({
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        height: '3px',
+        background: 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',
+        zIndex: 9999,
+        transition: 'width 0.1s ease'
+    });
+    $('body').prepend(scrollProgress);
+
+    function updateScrollProgress() {
+        const windowHeight = $(window).height();
+        const documentHeight = $(document).height();
+        const scrollTop = $(window).scrollTop();
+        const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
+        scrollProgress.css('width', progress + '%');
+    }
+
+    $(window).on('scroll', updateScrollProgress);
+    updateScrollProgress();
+
+    // ============================================
+    // 26. ENHANCED FORM VALIDATION FEEDBACK
+    // ============================================
+    
+    $('input, select, textarea').on('blur', function() {
+        const $input = $(this);
+        if ($input.val() && $input.is(':valid')) {
+            $input.addClass('is-valid').removeClass('is-invalid');
+        } else if ($input.val() && $input.is(':invalid')) {
+            $input.addClass('is-invalid').removeClass('is-valid');
+        }
+    });
+
+    // ============================================
+    // 27. PARALLAX EFFECT FOR SECTIONS
+    // ============================================
+    
+    function parallaxEffect() {
+        const scrolled = $(window).scrollTop();
+        $('.hero-section').css('background-position-y', scrolled * 0.5 + 'px');
+    }
+
+    $(window).on('scroll', parallaxEffect);
+
 })(jQuery);
 
 // ============================================
@@ -495,6 +617,27 @@ style.innerHTML = `
 
     .pulse {
         animation: pulse 0.5s ease-in-out;
+    }
+
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        width: 20px;
+        height: 20px;
+        animation: ripple-animation 0.6s ease-out;
+        pointer-events: none;
+    }
+
+    @keyframes ripple-animation {
+        to {
+            transform: scale(20);
+            opacity: 0;
+        }
+    }
+
+    .scroll-progress {
+        box-shadow: 0 0 10px rgba(143, 189, 63, 0.5);
     }
 `;
 document.head.appendChild(style);
