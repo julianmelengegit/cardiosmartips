@@ -278,6 +278,24 @@ img[src] {
     color: var(--white);
 }
 
+.navbar-brand .brand-icon {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar.scrolled .navbar-brand .brand-icon {
+    height: 85px;
+    width: 85px;
+    margin-right: 0;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+}
+
 .navbar-brand .logo {
     height: 65px;
     margin-right: 0;
@@ -540,6 +558,10 @@ img[src] {
     position: relative;
     text-align: center;
     animation: fadeInRight 0.8s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 @keyframes fadeInRight {
@@ -554,7 +576,12 @@ img[src] {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 90%;
+    max-height: 280px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
     animation: float 3s ease-in-out infinite;
 }
