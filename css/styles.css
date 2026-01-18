@@ -576,8 +576,8 @@ img[src] {
 }
 
 .hero-image img {
-    max-width: 90%;
-    max-height: 280px;
+    max-width: 100%;
+    max-height: 450px;
     width: auto;
     height: auto;
     object-fit: cover;
