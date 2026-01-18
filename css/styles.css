@@ -1277,6 +1277,41 @@ img[src] {
     margin: 0;
 }
 
+.contact-info-card .contact-text {
+    color: var(--gray-dark);
+    line-height: 1.8;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.contact-info-card .whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.contact-info-card .whatsapp-link:hover {
+    color: #128C7E;
+    transform: scale(1.05);
+}
+
+.contact-info-card .btn-success {
+    background: #25D366;
+    border-color: #25D366;
+    color: white;
+}
+
+.contact-info-card .btn-success:hover {
+    background: #128C7E;
+    border-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
 .contact-form-container {
     background: var(--white);
     padding: 40px;
