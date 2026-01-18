@@ -1980,6 +1980,7 @@ img[src] {
     transform: translateX(5px);
     box-shadow: var(--shadow-md);
 }
+.conduct-card {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     height: 100%;
