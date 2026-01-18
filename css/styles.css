@@ -1442,25 +1442,31 @@ img[src] {
    ============================================ */
 
 .floating-appointment {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    background: var(--gradient-primary);
-    color: var(--white);
-    padding: 15px 25px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none;
-    white-space: nowrap;
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 30px !important;
+    background: linear-gradient(135deg, #34506F 0%, #3D5B7E 50%, #78A832 100%) !important;
+    background: var(--gradient-primary) !important;
+    color: #FFFFFF !important;
+    color: var(--white) !important;
+    padding: 15px 25px !important;
+    border-radius: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    z-index: 1000 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    animation: floatButton 3s ease-in-out infinite !important;
 }
 
 .floating-appointment i {
@@ -1471,6 +1477,16 @@ img[src] {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 15px 40px rgba(52, 80, 111, 0.4);
     color: var(--white);
+    animation-play-state: paused;
+}
+
+@keyframes floatButton {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .floating-appointment span {
