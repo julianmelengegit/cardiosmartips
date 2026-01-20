@@ -1262,12 +1262,12 @@ img[src] {
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
-    min-height: 380px;
+    min-height: 400px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .contact-info-card::after {
@@ -1301,6 +1301,7 @@ img[src] {
     justify-content: center;
     margin: 0 auto 25px;
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .contact-info-card:nth-child(2) .contact-icon {
@@ -1318,8 +1319,18 @@ img[src] {
 
 .contact-info-card h4 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
     color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.contact-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 140px;
 }
 
 .contact-info-card p {
@@ -1353,6 +1364,7 @@ img[src] {
     background: #25D366;
     border-color: #25D366;
     color: white;
+    margin-top: auto;
 }
 
 .contact-info-card .btn-success:hover {
@@ -1360,6 +1372,10 @@ img[src] {
     border-color: #128C7E;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.contact-info-card .btn-outline-primary {
+    margin-top: auto;
 }
 
 .contact-form-container {
