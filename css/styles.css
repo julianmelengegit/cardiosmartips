@@ -242,6 +242,16 @@ img[src] {
     background: var(--primary-dark);
 }
 
+/* Equal height columns */
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.g-4 > [class*='col-'] {
+    display: flex;
+}
+
 /* ============================================
    2. NAVIGATION
    ============================================ */
@@ -441,16 +451,13 @@ img[src] {
 }
 
 .hero-logo {
-    width: 280px;
+    width: 350px;
     height: auto;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
     animation: fadeInDown 1s ease-out;
 }
 
@@ -466,7 +473,7 @@ img[src] {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
     background: var(--gradient-primary);
@@ -994,6 +1001,9 @@ img[src] {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .specialist-card:hover {
@@ -1015,12 +1025,12 @@ img[src] {
     filter: grayscale(20%) brightness(0.95);
 }
 
-/* Ajuste específico para las fotos de Orlando Castaño y Stephany Barbosa */
-.specialist-card:nth-child(2) .specialist-image,
-.specialist-card:nth-child(3) .specialist-image {
+/* Ajuste específico para todas las fotos de especialistas */
+.specialist-image {
     background-color: #E8ECEF;
 }
 
+.specialist-image img[src*="Jonnathan Patiño Pinilla"],
 .specialist-image img[src*="Orlando Castaño Cifuentes"],
 .specialist-image img[src*="Stephany Barbosa Balaguera"] {
     object-fit: contain;
