@@ -440,6 +440,20 @@ img[src] {
     animation: fadeInLeft 0.8s ease-out;
 }
 
+.hero-logo {
+    width: 280px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    animation: fadeInDown 1s ease-out;
+}
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -455,7 +469,10 @@ img[src] {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--dark);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1.2;
 }
 
@@ -469,6 +486,11 @@ img[src] {
     color: var(--gray);
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+}
+
 .hero-buttons .btn {
     padding: 15px 35px;
     font-size: 1rem;
@@ -477,6 +499,7 @@ img[src] {
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 400px;
 }
 
 .hero-buttons .btn::before {
@@ -669,6 +692,7 @@ img[src] {
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .section-description {
@@ -989,6 +1013,18 @@ img[src] {
     object-position: center top;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     filter: grayscale(20%) brightness(0.95);
+}
+
+/* Ajuste específico para las fotos de Orlando Castaño y Stephany Barbosa */
+.specialist-card:nth-child(2) .specialist-image,
+.specialist-card:nth-child(3) .specialist-image {
+    background-color: #E8ECEF;
+}
+
+.specialist-image img[src*="Orlando Castaño Cifuentes"],
+.specialist-image img[src*="Stephany Barbosa Balaguera"] {
+    object-fit: contain;
+    object-position: center top;
 }
 
 .specialist-card:hover .specialist-image img {
