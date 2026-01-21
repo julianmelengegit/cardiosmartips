@@ -1027,7 +1027,7 @@ img[src] {
 
 /* Ajuste específico para todas las fotos de especialistas */
 .specialist-image {
-    background-color: #E8ECEF;
+    background-color: #F1F1F1;
 }
 
 .specialist-image img[src*="Jonnathan Patiño Pinilla"],
