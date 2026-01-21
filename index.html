@@ -376,20 +376,24 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="appointment-form-container">
-                        <form id="appointmentForm" class="appointment-form">
+                        <form id="appointmentForm" class="appointment-form" name="citas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="citas">
+                            <input type="hidden" name="email-destino" value="consulta@cardiosmartips.com">
+                            <div style="display:none;">
+                                <label>No llenes este campo si eres humano: <input name="bot-field"></label>
+                            </div>
                             <h3 class="form-title">Agendar Cita</h3>
-                            <!-- NOTA: Configurar el formulario con el sistema de citas real -->
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre completo" required>
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                                <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Teléfono" required>
+                                <input type="tel" class="form-control" name="telefono" placeholder="Teléfono" required>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" required>
+                                <select class="form-select" name="servicio" required>
                                     <option value="">Selecciona un servicio</option>
                                     <option value="consulta">Consulta de Cardiología</option>
                                     <option value="electrocardiograma">Electrocardiograma</option>
@@ -400,10 +404,10 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <input type="date" class="form-control" required>
+                                <input type="date" class="form-control" name="fecha" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)"></textarea>
+                                <textarea class="form-control" name="mensaje" rows="3" placeholder="Mensaje (opcional)"></textarea>
                             </div>
                             <button type="submit" class="btn btn-light w-100">Agendar Cita</button>
                         </form>
@@ -526,10 +530,15 @@
                                 Recibirás respuesta en un plazo máximo de 15 días hábiles.
                             </p>
                         </div>
-                        <form id="pqrsfForm">
+                        <form id="pqrsfForm" name="pqrsf" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="pqrsf">
+                            <input type="hidden" name="email-destino" value="consulta@cardiosmartips.com">
+                            <div style="display:none;">
+                                <label>No llenes este campo si eres humano: <input name="bot-field"></label>
+                            </div>
                             <div class="mb-3">
                                 <label for="tipoSolicitud" class="form-label">Tipo de Solicitud</label>
-                                <select class="form-select" id="tipoSolicitud" required>
+                                <select class="form-select" id="tipoSolicitud" name="tipo-solicitud" required>
                                     <option value="">Selecciona el tipo de solicitud</option>
                                     <option value="peticion">Petición</option>
                                     <option value="queja">Queja</option>
@@ -541,30 +550,30 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="nombrePQRSF" class="form-label">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="nombrePQRSF" placeholder="Nombre completo" required>
+                                    <input type="text" class="form-control" id="nombrePQRSF" name="nombre" placeholder="Nombre completo" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="documentoPQRSF" class="form-label">Documento de Identidad</label>
-                                    <input type="text" class="form-control" id="documentoPQRSF" placeholder="Número de documento" required>
+                                    <input type="text" class="form-control" id="documentoPQRSF" name="documento" placeholder="Número de documento" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="emailPQRSF" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="emailPQRSF" placeholder="correo@ejemplo.com" required>
+                                    <input type="email" class="form-control" id="emailPQRSF" name="email" placeholder="correo@ejemplo.com" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="telefonoPQRSF" class="form-label">Teléfono de Contacto</label>
-                                    <input type="tel" class="form-control" id="telefonoPQRSF" placeholder="Número de contacto" required>
+                                    <input type="tel" class="form-control" id="telefonoPQRSF" name="telefono" placeholder="Número de contacto" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="asuntoPQRSF" class="form-label">Asunto</label>
-                                <input type="text" class="form-control" id="asuntoPQRSF" placeholder="Asunto de tu solicitud" required>
+                                <input type="text" class="form-control" id="asuntoPQRSF" name="asunto" placeholder="Asunto de tu solicitud" required>
                             </div>
                             <div class="mb-3">
                                 <label for="descripcionPQRSF" class="form-label">Descripción Detallada</label>
-                                <textarea class="form-control" id="descripcionPQRSF" rows="6" placeholder="Describe tu petición, queja, reclamo, sugerencia o felicitación de manera detallada" required></textarea>
+                                <textarea class="form-control" id="descripcionPQRSF" name="descripcion" rows="6" placeholder="Describe tu petición, queja, reclamo, sugerencia o felicitación de manera detallada" required></textarea>
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
@@ -639,9 +648,6 @@
                         <h4>Email</h4>
                         <div class="contact-content">
                             <p class="contact-text">consulta@cardiosmartips.com</p>
-                            <p class="contact-text">&nbsp;</p>
-                            <p class="contact-text">&nbsp;</p>
-                            <p class="contact-text">&nbsp;</p>
                         </div>
                         <a href="mailto:consulta@cardiosmartips.com" class="btn btn-sm btn-outline-primary mt-3">
                             <i class="fas fa-envelope me-1"></i> Enviar Email
@@ -653,19 +659,23 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="contact-form-container">
                         <h3>Envíanos un Mensaje</h3>
-                        <!-- NOTA: Configurar con sistema de correo real -->
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre" required>
+                        <form id="contactForm" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contacto">
+                            <input type="hidden" name="email-destino" value="consulta@cardiosmartips.com">
+                            <div style="display:none;">
+                                <label>No llenes este campo si eres humano: <input name="bot-field"></label>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email" required>
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Asunto" required>
+                                <input type="email" class="form-control" name="email" placeholder="Email" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                                <input type="text" class="form-control" name="asunto" placeholder="Asunto" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                         </form>

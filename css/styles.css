@@ -6,7 +6,12 @@
    FONTS - All Round Gothic (Tipografía Oficial CardioSmart)
    ============================================ */
 
+/* NOTA: Las fuentes All Round Gothic oficiales no están disponibles.
+   Se usarán las fuentes de Google Fonts (Montserrat y Lato) como alternativa.
+   Descomenta estas reglas cuando tengas los archivos de fuente. */
+
 /* All Round Gothic XLig */
+/*
 @font-face {
     font-family: 'All Round Gothic';
     src: url('../assets/fonts/AllRoundGothic-XLig.woff2') format('woff2'),
@@ -24,8 +29,10 @@
     font-style: italic;
     font-display: swap;
 }
+*/
 
 /* All Round Gothic Book */
+/*
 @font-face {
     font-family: 'All Round Gothic';
     src: url('../assets/fonts/AllRoundGothic-Book.woff2') format('woff2'),
@@ -43,8 +50,10 @@
     font-style: italic;
     font-display: swap;
 }
+*/
 
 /* All Round Gothic Medium */
+/*
 @font-face {
     font-family: 'All Round Gothic';
     src: url('../assets/fonts/AllRoundGothic-Medium.woff2') format('woff2'),
@@ -62,8 +71,10 @@
     font-style: italic;
     font-display: swap;
 }
+*/
 
 /* All Round Gothic Demi */
+/*
 @font-face {
     font-family: 'All Round Gothic';
     src: url('../assets/fonts/AllRoundGothic-Demi.woff2') format('woff2'),
@@ -72,6 +83,7 @@
     font-style: normal;
     font-display: swap;
 }
+*/
 
 /* ============================================
    1. ROOT VARIABLES & GENERAL STYLES
@@ -425,7 +437,9 @@ img[src] {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../assets/img/hero-bg.jpg') center/cover no-repeat;
+    /* background: url('../assets/img/hero-bg.jpg') center/cover no-repeat; */
+    /* NOTA: Imagen hero-bg.jpg no existe. Descomenta cuando agregues la imagen. */
+    background: linear-gradient(135deg, rgba(52, 80, 111, 0.05) 0%, rgba(119, 158, 126, 0.05) 100%);
     opacity: 0.1;
     z-index: 0;
 }
@@ -1262,12 +1276,12 @@ img[src] {
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
-    min-height: 400px;
+    min-height: 420px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .contact-info-card::after {
@@ -1329,8 +1343,10 @@ img[src] {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 140px;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+    padding: 20px 0;
 }
 
 .contact-info-card p {
@@ -1376,6 +1392,25 @@ img[src] {
 
 .contact-info-card .btn-outline-primary {
     margin-top: auto;
+}
+
+/* Media query para asegurar altura uniforme en desktop */
+@media (min-width: 992px) {
+    .contact-info-card {
+        min-height: 420px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    
+    .contact-content {
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-height: 160px !important;
+    }
 }
 
 .contact-form-container {
